@@ -2,7 +2,8 @@
   <div>
     <Navbar />
     <el-row v-loading="loading">
-      <el-col :span="12" :offset="3">
+      <p v-if="error && !loading">{{ error }}</p>
+      <el-col :span="18" :offset="3">
         <div>
           <el-avatar :size="120" :src="user.avatar_url"> </el-avatar>
         </div>
